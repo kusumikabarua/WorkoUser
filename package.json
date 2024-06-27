@@ -1,0 +1,29 @@
+{
+  "name": "workouser",
+  "version": "1.0.0",
+  "description": "Nodjs project for creating,updating  and listing users",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kusumikabarua/WorkoUser.git"
+  },
+  "author": "Kusumika Barua",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kusumikabarua/WorkoUser/issues"
+  },
+  "homepage": "https://github.com/kusumikabarua/WorkoUser#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.2.0",
+    "nodemon": "^3.1.0"
+  }
+}
