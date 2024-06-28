@@ -41,7 +41,8 @@ Node-UM uses a number of open source projects to work properly:
 
 ### Installation
 
-Node-UM requires [node.js](https://nodejs.org),  [Typescript](https://www.typescriptlang.org), [Mongodb](https://www.mongodb.com)
+Node-UM requires [node.js](https://nodejs.org),
+[Mongodb](https://www.mongodb.com)
 
 Install the dependencies and devDependencies and import DB Collections from DB folder.
 then run the below script to start the server.
@@ -70,7 +71,52 @@ You can change env variables from **.env** file
 
 > For all requests ( URL & JSON body ) 
 
+POST - Add New user
+URL - https://workouser.onrender.com/worko/auth/register
+Request Body(Json):
+{
+    "name": "Candidate1",
+    "email": "Candidate1@gmail.com",
+    "password": "Candidate123",
+    "city":"kolkata",
+    "age":40,
+    "zipCode":"700000"
+}
 
+GET - Get All Users  
+URL - https://workouser.onrender.com/worko/user
+JWS token in Authorization header
+
+GET - Get User By ID 
+URL - https://workouser.onrender.com/worko/user/:userId
+JWS token in Authorization header
+  
+PUT/PATCH - Edit User 
+URL - https://workouser.onrender.com/worko/user/:userId
+JWS token in Authorization header
+Request Body(Json):
+{
+    "name": "Candidate1",
+    "email": "Candidate1@gmail.com",
+    "password": "Candidate123",
+    "city":"kolkata",
+    "age":40,
+    "zipCode":"700000"
+}
+
+ DELETE - Delete User ( Soft Delete )
+ URL - https://workouser.onrender.com/worko/user/:userId
+ JWS token in Authorization header
+
+ POST - Login As User 
+ URL - https://workouser.onrender.com/worko/auth/login
+
+Request Body(Json):
+{
+    "email": "Candidate1@gmail.com",
+    "password": "Candidate123",
+   
+}
 
  **Authentication** 
 
@@ -83,21 +129,6 @@ Server ->> Client: return access & refresh token
 
 Client ->> Server: send access token in Authorization header
 Server ->> Client: return response
-
-
-
-
-
-
-```
-
-
-
-
- **Authorization** 
-
-
-
 
  # To be continued .......
  
